@@ -1,0 +1,52 @@
+{
+  "name": "cheap-agent-codex",
+  "version": "1.2.5",
+  "description": "Codex integration for Cheap Agent: MCP delegation, skills, hooks, isolated worker jobs and verification.",
+  "license": "MIT",
+  "author": "muaaz9329",
+  "keywords": [
+    "codex",
+    "codex-mcp",
+    "claude-code",
+    "claude",
+    "mcp",
+    "ai-agents",
+    "deepseek",
+    "openrouter",
+    "cost",
+    "delegation"
+  ],
+  "type": "module",
+  "bin": {
+    "cheapag": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "plugin",
+    "LICENSE",
+    "README.md",
+    "codex",
+    "CODEX.md"
+  ],
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "pretest": "npm run build",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@opencode-ai/sdk": "1.19.0",
+    "opencode-ai": "1.19.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4"
+  },
+  "private": true
+}
